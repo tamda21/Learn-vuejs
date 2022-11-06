@@ -6,20 +6,27 @@
         <h3 v-show="joker.show">{{joker.discrpt}}</h3>
       </li>
     </ul>
+    <button v-on:click="handelDelet">Delet</button>
   </div>
 </template>
 
 <script>
 
 export default {
-  props:['jokers'],
+  props:{
+    jokers:{
+      type:Array
+    }
+  },
   data () {
     return {
      
     }
   },
   methods:{
-    
+handelDelet:function(){
+      this.jokers.pop()
+    }
   }
 }
 </script>

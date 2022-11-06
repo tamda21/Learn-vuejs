@@ -1,7 +1,7 @@
 <template>
 
    <footer>
-     <p>{{copyright}}</p>
+     <p>{{copyright}} {{title}}</p>
    </footer>
   
   
@@ -10,10 +10,14 @@
 <script>
 
 export default {
-  
+  props:{
+    title:{
+      type:String
+    }
+  },
   data () {
     return {
-      copyright:'Copyright 2022 Vue Jokers'
+      copyright:'Copyright 2022'
     }
   },
   methods:{

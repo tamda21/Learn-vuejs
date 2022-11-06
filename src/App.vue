@@ -1,8 +1,10 @@
 <template>
   <div>
-  <app-header></app-header>
+  <app-header v-bind:title="title"></app-header>
   <jokers v-bind:jokers="jokers"></jokers>
-  <app-footer></app-footer>
+  <hr>
+  <jokers v-bind:jokers="jokers"></jokers>
+  <app-footer  v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -21,8 +23,10 @@ export default {
       jokers:[
        {name:'Abde',discrpt:'Father Of Family',show:false},
        {name:'Meryem',discrpt:'Mother Of Family',show:false},
-       {name:'Loujaine',discrpt:'Child Of Family',show:false}
-       ]
+       {name:'Loujaine',discrpt:'Child Of Family',show:false},
+       {name:'ali',discrpt:'Grand Father',show:false}
+       ],
+       title:'Vue Jokers'
     }
   },
   methods:{
