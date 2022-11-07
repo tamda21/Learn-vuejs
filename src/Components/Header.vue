@@ -22,7 +22,8 @@ export default {
   },
   methods:{
     changeTitle:function () {
-      this.title='Vue'
+     // this.title='Vue'
+     this.$emit('titleChange','Vu')
     }
   }
 }

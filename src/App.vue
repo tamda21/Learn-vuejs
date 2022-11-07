@@ -1,6 +1,6 @@
 <template>
   <div>
-  <app-header v-bind:title="title"></app-header>
+  <app-header v-bind:title="title" v-on:titleChange="UpdateTitle($event)"></app-header>
   <jokers v-bind:jokers="jokers"></jokers>
   <hr>
   <jokers v-bind:jokers="jokers"></jokers>
@@ -30,7 +30,9 @@ export default {
     }
   },
   methods:{
-    
+    UpdateTitle:function(updated){
+      this.title=updated;
+    }
   }
 }
 </script>
